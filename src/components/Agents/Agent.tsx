@@ -18,14 +18,14 @@ const Agent: FC<{ agent: IAgent }> = ({ agent }) => {
       }
   
   return (
-    <div className="container">
+    <div className="container max-w-[200px] max-h-[400px]">
       <header>
         <div className="avatar-holder">
           <img src={agent.photoUrl} className="avatar" alt={agent.firstName} />
         </div>
         <h2 className="agent-name">{agent.firstName + " " + agent.lastName}</h2>
       </header>
-      <div className="body">{agent.aboutMe}</div>
+      <div className="body  overflow-scroll">{agent.aboutMe}</div>
       <footer>
         <div className="full-width-flex-box">
           <div className="one-third-flex-box">
