@@ -20,10 +20,10 @@ const Agent: FC<{ agent: IAgent }> = ({ agent }) => {
   return (
     <div className="container max-w-[200px] max-h-[400px]">
       <header>
-        <div className="avatar-holder">
+        <div className="avatar-holder hidden">
           <img src={agent.photoUrl} className="avatar" alt={agent.firstName} />
         </div>
-        <h2 className="agent-name">{agent.firstName + " " + agent.lastName}</h2>
+        <h2 className="agent-name bg-slate-600 text-white p-2">{agent.firstName + " " + agent.lastName}</h2>
       </header>
       <div className="body  overflow-scroll">{agent.aboutMe}</div>
       <footer>
@@ -36,7 +36,7 @@ const Agent: FC<{ agent: IAgent }> = ({ agent }) => {
           </div>
         </div>
       </footer>
-      <button onClick={handleDelete}>DELETE</button>
+      <button className="py-1 my-1 bg-red-500 text-white rounded-lg" onClick={handleDelete}>DELETE</button>
     </div>
   );
 };
